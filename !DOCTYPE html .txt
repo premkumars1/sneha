@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Login page validation</title> 
+        <script> 
+            function validation() 
+            { 
+                var name,pass; 
+                name = document.getElementById('t1').value; 
+                pass = document.getElementById('t2').value; 
+                if (name=='' && pass=='') 
+                    alert("Please enter username and password") 
+                else if (name=='') 
+                    alert("Enter the name"); 
+                else if (pass=='') 
+                    alert("Enter password"); 
+                else if (pass.length<8) 
+                    alert("Password must be minimum 8 characters"); 
+                else 
+                    alert("User "+name+" logged in successfully"); 
+            } 
+        </script> 
+    </head> 
+    <body> 
+        <form> 
+            <label>User Name:</label> 
+            <input type="text" id="t1"><br> 
+            <label>Password:</label> 
+            <input type="password" id="t2"><br> 
+            <input type="button" value="Submit" onclick="validation()"> 
+            <input type="reset" value="Reset"> 
+        </form> 
+    </body> 
+</html> 
